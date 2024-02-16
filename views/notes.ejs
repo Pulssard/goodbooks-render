@@ -1,0 +1,40 @@
+<%- include ('partials/header.ejs'); %>
+
+<% if(!books.notes || books.notes.length === 0){ %>
+    <div class="container">
+        <h1>You don't have any notes yet. Use edit to change that!</h1>
+        <a class="edit" href="/edit/<%= books.book_id  %>">Edit</a>
+    </div>
+    <% } else {  %>
+        <ol class="container">
+                <li>
+                    <div class="bookRow">
+                        <div class="photoFlex">
+                            <div><img class="imgFloat" src="https://covers.openlibrary.org/b/olid/<%= books.lccn %>-M.jpg" alt="book cover" ></div>
+                            <a class="edit" href="/edit/<%= books.id  %>">EDIT</a>
+                            <form action="/delete" method="post">
+                                <input type="hidden" name="id" value="<%= books.id %>">
+                                <input type="submit" class="delete" value="DELETE">
+                            </form>
+                        </div>
+                        <div class="columnFlex">
+                            <div class="author-title">
+                                <div><h2><%= books.title %></h2></div>
+                                <div><h3><%= books.author %></h3></div>
+                            </div>
+                            <div class="date-rating">
+                                <div><h4>Rating: <%= books.rating %></h4></div>
+                                <div><h5>Readed on: <%= books.read_date.toLocaleDateString('en-CA') %></h5> </div>
+                            </div>
+                            <div>
+                                <%= books.notes %>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+
+        <% } %>
+    </ol>
+
+
+<%- include ('partials/footer.ejs'); %>

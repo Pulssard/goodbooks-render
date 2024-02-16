@@ -1,0 +1,35 @@
+<%- include ('partials/header.ejs'); %>
+<br>
+
+<div class=" editFlex">
+
+    <form class="editForm" action="/edit/<%= books.id %>" method="post">
+        <div class="container">
+            <div class="edit-flex">
+            <img class="imgFloat" src="https://covers.openlibrary.org/b/olid/<%= books.lccn %>-L.jpg" alt="book cover">
+            <div class="column-edit">
+                <label for="title"><b>Title:</b></label> 
+                <input type="text" id="title" name="title" value="<%= books.title %>" required>
+                <label for="author"><b>Author:</b></label>
+                <input type="text" id="author" name="author" value="<%= books.author %>" required>
+                <label for="genre"><b>Genre:</b></label>
+                <input type="text" id="genre" name="genre" value="<%= books.genre %>" required>
+                <label for="date"><b>Date:</b></label>
+                <input type="date" id="date" name="date" value="<%= books.date %>" required>
+                <label for="rating"><b>Rating:</b></label>
+                <input type="text" id="rating"  name="rating" value="<%= books.rating %>" required>
+            </div>
+            </div>
+                <label for="description"><b>Description:</b></label>
+                <textarea id="description" name="description" rows="10" required><%=books.description %></textarea> 
+                <label for="notes"><b>Your Notes:</b></label>
+                <textarea id="notes" name="notes" rows="20" required><%=books.notes %></textarea>
+                <input type="hidden" value="<%= books.id  %>">
+                <br>
+                <button class="save">Save</button>
+        </div>
+        
+    </form>
+</div>
+
+<%- include('partials/footer.ejs'); %>

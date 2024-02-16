@@ -1,0 +1,450 @@
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body{
+    color: black;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    /*font-family: 'DM Mono', monospace;*/
+    font-family: "Lato", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    
+}
+
+main{
+    flex:1;
+}
+a{
+    text-decoration: none;
+    color:black;
+    padding: 0.3rem;
+}
+a:hover{
+    background-color:  #382110;
+    color:white;
+}
+
+header>a{
+  padding:1em;
+  margin:0;
+}
+
+header{
+    font-size: large;
+    display: flex;
+    background-color: #F4F1EA;
+    justify-content: space-around;
+    align-items: center;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Set the shadow properties */
+    
+}
+footer{
+    padding-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: #F4F1EA;
+    box-shadow:2px 2px 6px rgba(0, 0, 0, 0.5); /* Set the shadow properties */
+}
+.footerFlex{
+    display: flex;
+    column-gap: 2rem;
+}
+
+.searchForm{
+    position: relative;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Set the shadow properties */
+    border-radius: 4px;
+}
+
+.searchInput{
+    height: 2rem;
+    padding: 0.3rem;
+    border-radius: 4px;
+}
+.lupa{
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+    padding:0;
+    position:absolute;
+    right:3%;
+    top:30%; 
+}
+
+.bookRow{
+    background-color: #f6f2e6;
+    border-radius: 15px;
+    margin: 0 3rem;
+    display:flex;
+    padding:0.5rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Set the shadow properties */
+    
+}
+
+.bookRow > *{
+    padding:0.3em;
+    
+}
+
+img{   
+    height:100%;
+    width:14rem;
+    border-radius: 4px;     
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    margin: 2rem 6rem;
+    gap:0.5rem;
+    text-align: start;
+    background-color: #e2c8aa78;
+    min-height: 100vh;
+    padding: 1rem;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Set the shadow properties */
+}   
+
+
+
+input,
+textarea {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 0.5em;
+  border: 1px solid black;
+  border-radius: 4px;
+  font-size: 1.1em;
+  outline: none;
+  transition: border 0.3s;
+  background: none;
+  line-height: 1.5em;
+}
+h1{
+    text-align: center;
+}
+.container.editFlex h1,
+.container.editFlex h3,
+.container.editFlex h5 {
+  text-align: center;
+}
+.blog-post{
+    line-height: 1.5rem;
+}
+
+h1,h2,h3,h4,h5{
+    margin:0.4em 0;
+}
+
+.viewNotes{
+    color:blue;
+}
+.columnFlex{
+    padding: 0.3em;
+    line-height: 1.5em;
+    display:flex;
+    flex-direction: column;
+    flex:1;
+}
+
+.dropdown{
+    position: relative;
+    display: inline-block;
+    max-width:160px;
+}
+
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    min-width: 160px;
+    z-index: 1;
+  }
+  
+  .dropdown:hover .dropdown-content {
+    display: block;
+  }
+
+  .dropdown button {
+    background-color: #f6f2e6;
+    padding: 1rem;
+    border: none;
+    cursor: pointer;
+    min-width: 160px;
+    margin-left:3rem;
+    font-size: large;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5); /* Set the shadow properties */
+  }
+
+
+
+  .dropdown-content form {
+    display: block;
+    margin: 0;
+    
+  }
+
+  .dropdown-content button {
+    display: block;
+    text-align: left;
+    padding: 10px;
+    background-color: #f9f9f9;
+    border: none;
+    cursor: pointer;
+    font-size: medium;
+  }
+
+  .dropdown-content button:hover {
+    background-color: #382110;
+    color:white;
+  }
+
+  .logo>a:hover{
+    background-color: #f6f2e6;
+    color:black;
+  }
+
+
+  .delete:hover{
+    background-color: red;
+    color:white;
+  }
+
+  svg{
+   width:min-content;
+   height: min-content;
+  }
+  .modalBtn{
+    border: none;
+  }
+  .edit, .delete{
+    cursor: pointer;
+    text-align: center;
+    background-color: transparent;
+    border-radius: 5px;
+  }
+
+  .edit{
+    padding: 0.8em;
+    border:solid black 0.8px;
+  }
+
+  label{
+    padding: 0.3rem;
+  }
+.buttons{
+    display: flex;
+}
+  .save{
+    background-color: rgba(0, 0, 0, 0.2);
+    padding:0.5rem;
+    border-radius: 5px;
+    font-size: large;
+    cursor: pointer;
+    
+  }
+  .edit:hover, .save:hover{
+    background-color: rgba(97, 223, 43, 0.8);
+    color: white;
+  }
+
+  .buttons{
+    display:flex;
+    flex-direction: column;
+    justify-content: end;
+  }
+
+  .container li {
+    list-style-position: inside;
+  }
+
+ .edit-flex{
+  display: flex;
+  flex-wrap: wrap;
+ }
+
+ .column-edit{
+  display: flex;
+  flex-direction: column;
+  flex:1;
+ }
+
+
+  .photoFlex{
+    display: flex;
+    flex-direction: column;
+    gap:1rem;
+  }
+
+  .editIcon:hover{
+    background-color: green;
+  }
+
+  .editIcon{
+    border-radius: 5px;
+  }
+
+span{
+    padding:0.3rem;
+    font-size: 2rem;
+    cursor:pointer;
+}
+
+  .modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+
+  }
+
+  .cancel{
+    cursor: pointer;
+  }
+  .cancel:hover{
+    background-color: green;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    position: relative;
+    background-color: #fefefe;
+    margin: auto;
+    padding:0;
+    padding-bottom: 2rem;
+    border: 1px solid #888;
+    max-width: 800px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2),0 6px 20px 0 rgba(0,0,0,0.19);
+    text-align: center;
+    background-color: #F4F1EA;
+    border-radius: 10px;
+    height:30vh;
+  }
+
+  .modal-content input{
+    width: 100px;
+  }
+  .modal-content>h3{
+    margin:2rem;
+  }
+
+  .modal-flex{
+    display:flex;
+    gap:2rem;
+    margin: 2rem;
+    justify-content: center;
+  }
+  footer *:hover{
+    background-color: #f6f2e6;
+  }
+  .container.add{
+    margin: 2rem 15rem;
+}
+
+.imgFloat{
+  margin-right:1em;
+}
+    
+span{
+    float:right;
+}
+
+@media(max-width:576px){
+    header{
+        font-size: small;
+        flex-wrap: wrap;
+        row-gap: 1rem;
+    }
+    img{
+        width: 10rem;
+        height: max-content;
+    }
+    .bookRow{
+        flex-direction: column;
+        margin: 0;
+    }
+    .container, .container.add{
+        margin: 0;
+    }
+    .imgFlex{
+        display: flex;
+        justify-content: center;
+    }
+    .buttons{
+        flex-direction: row;
+    }
+    .dropdown button{
+        margin-left:0;
+    }
+    .dropdownFlex{
+        display:flex;
+        justify-content: center;
+    }
+}
+
+@media(max-width:768px){
+    header{
+        font-size: medium;
+        flex-wrap: wrap;
+        row-gap: 1rem;
+    }
+    img{
+        width: 15rem;
+        height: max-content;
+    }
+    .bookRow{
+        flex-direction: column;
+        margin: 0;
+    }
+    .container, .container.add{
+        margin: 0;
+    }
+    .imgFlex{
+        display: flex;
+        justify-content: center;
+    }
+    .buttons{
+        flex-direction: row;
+    }
+    .dropdown button{
+        margin-left:0;
+    }
+    .dropdownFlex{
+        display:flex;
+        justify-content: center;
+    }
+}
+
+@media (min-width:768px) and ( max-width: 1126px){
+    header{
+        font-size: larger;
+        
+    }
+    img{
+        width: 20rem;
+        height: max-content;
+    }
+    .bookRow{
+        flex-direction: column;
+        margin: 0;
+    }
+    .container{
+        margin: 0;
+    }
+    .container.add{
+        margin: 2rem 4rem;
+    } 
+    .imgFlex{
+        display: flex;
+        justify-content: center;
+    }
+}

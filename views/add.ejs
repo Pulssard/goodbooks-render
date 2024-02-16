@@ -1,0 +1,27 @@
+<%- include ('partials/header.ejs'); %>
+<br>
+
+<div class="container add">
+    <h1>Add your book below</h1>
+    <form action="/add" method="post">
+        <label for="title"><b>Title:</b></label> 
+        <input type="text"  id="title" name="title" required>
+        <label for="author"><b>Author:</b></label>
+        <input type="text" id="author" name="author" required>
+        <label for="genre"><b>Genre:</b></label>
+        <input type="text" id="genre" name="genre" >
+        <label for="date"><b>Date:</b></label>
+        <input type="date" id="date" name="date" >
+        <label for="rating"><b>Rating:</b></label>
+        <input type="text" id="rating" name="rating">
+        <label for="description"><b>Description:</b></label>
+        <textarea id="description" name="description" rows="7" required></textarea>
+        <label for="notes"><b>Your Notes:</b></label>
+        <textarea id="notes" name="notes" rows="20"></textarea>
+        <input type="hidden" >
+        <br>
+        <button class="save">Save</button>
+    </form>
+</div>
+
+<%- include('partials/footer.ejs'); %>

@@ -1,0 +1,50 @@
+<%- include ('partials/header.ejs'); %>
+
+<div class="container">
+
+    <div class="col">
+    
+        <article class="blog-post">
+            <h2 >Project Summary</h2>
+            <p >January 22, 2024 by <span style="font-weight: bold;">Daniel Rusu</span></p>
+    
+            <p>Get to know a bit more about this project and the learning objectives of it.</p>
+            <hr>
+            <h2>Objectives</h2>
+            <ol>
+                <li><b>API</b> integration</li>
+                <li><b>Express.js</b> and <b>Node.js</b> (server side programming.) </li>
+                <li>Implementation of <b>CRUD </b>forms.</li>
+                <li><b>PostgreSQL</b> data base</li> 
+            </ol>
+
+            <h3>Technical details</h3>
+            <p>With the objectives set, these are the modules that my Book Notes project integrates to accomplish the result.</p>
+
+            <ul>
+                <li>express</li>
+                <li>body-parser</li>
+                <li>pg</li>
+                <li>axios</li>
+            </ul>
+
+            <p>In addition to this, a PosgreSQL database was created to hold the tables needed to store the projects data.</p>
+
+            <p>Lastly, for the API integration, I used the<u><a href="https://openlibrary.org/dev/docs/api/covers">Open Library Covers API</a></u> to <b>automatically fetch</b> book covers, based on <b>title</b> and <b>author</b>.</p>
+            <ol>
+                <h3>Features</h3>
+                <li>Add new book to the list using <b>New Book</b> from the header</li>
+                <li>Change the content using <b>edit</b> icon</li>
+                <li>Sort by rating or recency</li>
+                <li>Delete the book using <b>delete</b> iconn where a <b>modal</b> window will appear</li>
+                <li>Search for a book from your list using search input</li>
+            </ol>
+
+        
+
+          
+    </article></div>
+    
+</div>
+
+<%- include('partials/footer.ejs'); %>
