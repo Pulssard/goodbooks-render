@@ -318,7 +318,6 @@ span{
   .modal-content {
     position: relative;
     background-color: #fefefe;
-    margin: auto;
     padding:0;
     padding-bottom: 2rem;
     border: 1px solid #888;
@@ -327,7 +326,8 @@ span{
     text-align: center;
     background-color: #F4F1EA;
     border-radius: 10px;
-    height:30vh;
+    height:40vh;
+
   }
 
   .modal-content input{
@@ -395,7 +395,7 @@ span{
     header{
         font-size: medium;
         flex-wrap: wrap;
-        row-gap: 1rem;
+        
     }
     img{
         width: 15rem;
@@ -407,14 +407,13 @@ span{
     }
     .container, .container.add{
         margin: 0;
+        padding:auto 0;
     }
     .imgFlex{
         display: flex;
         justify-content: center;
     }
-    .buttons{
-        flex-direction: row;
-    }
+
     .dropdown button{
         margin-left:0;
     }
@@ -422,6 +421,15 @@ span{
         display:flex;
         justify-content: center;
     }
+    .searchForm{
+      width:100%;
+      margin:0 1em;
+      margin-bottom:1em;
+      
+    }
+    .buttons{
+      flex-direction: row;
+  }
 }
 
 @media (min-width:768px) and ( max-width: 1126px){
@@ -447,4 +455,7 @@ span{
         display: flex;
         justify-content: center;
     }
+    .buttons{
+      flex-direction: row;
+  }
 }
