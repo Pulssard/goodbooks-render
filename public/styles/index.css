@@ -227,9 +227,10 @@ h1,h2,h3,h4,h5{
     border-radius: 5px;
   }
 
-  .edit{
+  .edit, .save{
     padding: 0.8em;
     border:solid black 0.8px;
+    width:fit-content;
   }
 
   label{
@@ -237,6 +238,7 @@ h1,h2,h3,h4,h5{
   }
 .buttons{
     display: flex;
+    width:fit-content;
 }
   .save{
     background-color: rgba(0, 0, 0, 0.2);
@@ -293,6 +295,11 @@ span{
     cursor:pointer;
 }
 
+
+
+.editIcon > *{
+  margin-left: 0.4em;
+}
   .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -304,7 +311,6 @@ span{
     height: 100%; /* Full height */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-
   }
 
   .cancel{
@@ -318,6 +324,7 @@ span{
   .modal-content {
     position: relative;
     background-color: #fefefe;
+    margin:auto;
     padding:0;
     padding-bottom: 2rem;
     border: 1px solid #888;
@@ -431,6 +438,8 @@ span{
       flex-direction: row;
   }
 }
+
+
 
 @media (min-width:768px) and ( max-width: 1126px){
     header{

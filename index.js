@@ -82,7 +82,7 @@ app.get("/edit/:id", async (req, res) => {
 
 //post request, for changing the info in the databases, based by the edits made by the user
 app.post("/edit/:id", async (req, res) => {
-    const id = parseInt(req.params.id);
+    const id = parseInt(req.params.id) + 1;
     const data = await db.query("SELECT * FROM books JOIN notes ON books.id = book_id WHERE books.id = $1 ",[id]);
     const rows = data.rows[0];
     const title = req.body.title || rows.title;
@@ -92,11 +92,11 @@ app.post("/edit/:id", async (req, res) => {
     const description = req.body.description || rows.description;
     const notes = req.body.notes || rows.notes;
     const rating = req.body.rating || rows.rating;
-    //updating the database with the new values
-    await db.query("UPDATE books SET title=$1, author=$2, genre=$3, description=$4 WHERE id= $5",[title, author, genre, description, id]);
+    const lccn = req.body.lccn || rows.lccn;
+        //updating the database with the new values
+    await db.query("UPDATE books SET title=$1, author=$2, genre=$3, description=$4,lccn=$5 WHERE id= $6",[title, author, genre, description,lccn, id]);
     await db.query("UPDATE notes SET read_date=$1, rating=$2, notes=$3 WHERE book_id=$4",[read_date, rating, notes, id]);
     res.redirect("/");
-
 });
 
 //deleting a book by it's id( which is specified also in the index.ejs)

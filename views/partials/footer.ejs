@@ -13,9 +13,16 @@
     var modal = document.querySelector(".modal");
     var span = document.querySelector(".close");
 
-    function block(book_id){
+    function block(book_id, book_title, book_author){
         var id= document.querySelector("#bookId");
         id.value = book_id;
+
+        var title = document.querySelector(".modal-content h5");
+        title.innerText = book_title;
+
+        var author = document.querySelector(".modal-content h6");
+        author.innerText = "by " + book_author;
+
         modal.style.display = "block";
     }
     function none() {

@@ -15,9 +15,11 @@
                 <label for="genre"><b>Genre:</b></label>
                 <input type="text" id="genre" name="genre" value="<%= books.genre %>" required>
                 <label for="date"><b>Date:</b></label>
-                <input type="date" id="date" name="date" value="<%= books.date %>" required>
+                <input type="date" id="date" name="date" value="<%= books.read_date.toLocaleDateString('en-CA') %>"required>
                 <label for="rating"><b>Rating:</b></label>
                 <input type="text" id="rating"  name="rating" value="<%= books.rating %>" required>
+                <label for="lccn"><b>OLID code:</b></label>
+                <input type="text" id="lccn"  name="lccn" value="<%= books.lccn %>" placeholder="If wou don't like the cover, find OLID code on OpenLibrary and change it" required>
             </div>
             </div>
                 <label for="description"><b>Description:</b></label>
@@ -25,8 +27,9 @@
                 <label for="notes"><b>Your Notes:</b></label>
                 <textarea id="notes" name="notes" rows="20" required><%=books.notes %></textarea>
                 <input type="hidden" value="<%= books.id  %>">
+                <button class="save" >Save</button>
                 <br>
-                <button class="save">Save</button>
+
         </div>
         
     </form>
