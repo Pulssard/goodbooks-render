@@ -4,6 +4,12 @@
 
 This is a simple Book Management System built with Node.js, Express.js, PostgreSQL, and EJS templates. It allows users to keep track of their reading list, add new books, edit existing ones, and delete books. Additionally, users can write notes for each book they've read.
 
+## Demo
+
+https://goodbooks-zivf.onrender.com/
+
+*The website requires up to 20s to load, due to free hosting of the back-end part.
+
 ## Features
 
 - **Add Books**: Users can add new books to their reading list, providing details such as title, author, genre, description, and notes.
